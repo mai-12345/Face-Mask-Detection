@@ -1,4 +1,3 @@
-%%writefile face_mask_detection.py
 
 import streamlit as st
 import cv2
