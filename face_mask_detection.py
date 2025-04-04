@@ -6,7 +6,8 @@ from tensorflow.keras.models import load_model
 
 st.title(" Face Mask Detection Application")
 
-model=load_model(r"C:\Users\H-p\Downloads\face_mask_detection_model.h5")
+model = load_model("face_mask_detection_model.h5")
+
 
 uploaded_image=st.file_uploader(" Choose an Image....",type=['png', 'jpg', 'jpeg', 'webp'])
 
