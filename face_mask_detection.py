@@ -1,4 +1,5 @@
-import gdown
+%%writefile face_mask_detection.py
+
 import streamlit as st
 import cv2
 import numpy as np
@@ -6,13 +7,7 @@ from tensorflow.keras.models import load_model
 
 st.title(" Face Mask Detection Application")
 
-url = 'https://drive.google.com/file/d/1PVX4Uvh-AGxlSQ2Vh00PUdfJBgIxIAmk/view?usp=drive_link'
-output = 'face_mask_detection_model.h5'
-
-gdown.download(url, output, quiet=False)
-
-model = load_model(output)
-
+model=load_model(r"https://drive.google.com/open?id=1IUUfk54GiF8EM3dcraYn2M__ijOX7ec6&usp=drive_fs")
 
 uploaded_image=st.file_uploader(" Choose an Image....",type=['png', 'jpg', 'jpeg', 'webp'])
 
